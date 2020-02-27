@@ -62,9 +62,11 @@ public class FileBasedStore {
             if (!usersFile.exists()){
                     OutputStream outPassFile = new FileOutputStream(passFileName);
                     outPassFile.write(data,0,data.length);
+                    outPassFile.close();
             }else{
                 OutputStream outPassFile = new FileOutputStream(passFileName,true);
                  outPassFile.write(data,0,data.length);
+                 outPassFile.close();
             }
         }catch(IOException e) {
          System.out.print("Exception: " +e.getMessage());

@@ -23,6 +23,7 @@ public class TUKGateSystem {
         tukGateSys.myPrint("1. Login (I am Registered) \n2. I want to Register");
         Scanner keyBoard = new Scanner(System.in);
         int choice = keyBoard.nextInt();
+        
         switch (choice) {
             case 1:
                 tukGateSys.currLoggedInUser = new User();
@@ -36,6 +37,7 @@ public class TUKGateSystem {
                 tukGateSys.myPrint("Wrong Choice");
                 break;
         }
+        keyBoard.close();
     }
 
 }

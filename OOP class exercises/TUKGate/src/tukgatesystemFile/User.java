@@ -34,22 +34,24 @@ public class User {
     void register() {
         Scanner keyBoard = new Scanner(System.in);
         myPrint("Enter firstName:");
-        keyBoard.close();
-
-        String firstName = keyBoard.next();
+       String firstName = keyBoard.next();
+    //    keyBoard.close();
          keyBoard = new Scanner(System.in);
         myPrint("Enter secondName:");
-        keyBoard.close();
-
+       
         String secondName = keyBoard.next();
+        // keyBoard.close();
+
         keyBoard = new Scanner(System.in);
         myPrint("Enter UserName to Register:");
         String username = keyBoard.next();
-        keyBoard.close();
+        // keyBoard.close();
         myPrint("Enter password for User: " + username);
         String passwd = keyBoard.next();
-        keyBoard.close();
+        // keyBoard.close();
         FileBasedStore myLogin = new FileBasedStore();
+        
         myLogin.createUsersFile(firstName, secondName, username, passwd);
+        
     }
 }
