@@ -26,6 +26,7 @@ public class User {
         String username = keyBoard.next();
         myPrint("Enter password");
         String passwd = keyBoard.next();
+        keyBoard.close();
         FileBasedStore myLogin = new FileBasedStore();
         myLogin.checkUser(username, passwd);
     }
@@ -33,15 +34,21 @@ public class User {
     void register() {
         Scanner keyBoard = new Scanner(System.in);
         myPrint("Enter firstName:");
+        keyBoard.close();
+
         String firstName = keyBoard.next();
          keyBoard = new Scanner(System.in);
         myPrint("Enter secondName:");
+        keyBoard.close();
+
         String secondName = keyBoard.next();
-         keyBoard = new Scanner(System.in);
+        keyBoard = new Scanner(System.in);
         myPrint("Enter UserName to Register:");
         String username = keyBoard.next();
+        keyBoard.close();
         myPrint("Enter password for User: " + username);
         String passwd = keyBoard.next();
+        keyBoard.close();
         FileBasedStore myLogin = new FileBasedStore();
         myLogin.createUsersFile(firstName, secondName, username, passwd);
     }
